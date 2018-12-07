@@ -9,7 +9,8 @@
 
  1.  **http://aws.amazon.com sayfasına gidin ve konsola giriş yapın.** [Henüz bir AWS hesabınız bulunmuyorsa, yeni hesap açmak için bu linkdeki açıklamaları takip edin (İngilizce).](https://github.com/alexa/alexa-cookbook/tree/master/aws/set-up-aws.md)
  
-    [![Developer Console](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/2-1-sign-in-to-the-console._TTH_.png)](https://console.aws.amazon.com/console/home)
+     [![Developer Console](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/2-1-sign-in-to-the-console._TTH_.png)](https://console.aws.amazon.com/console/home)
+    
 
 2.  **Açılan sayfanın üst kısmında yer alan "Services" ("Hizmetler") linkini tıklayın ve ekrana gelen arama alanına "Lambda" kelimesini girin.**  Lambda hizmeti sayfanın "Compute" ("Bilgi İşleme") hizmeti bölümünde de bulunur.
 
@@ -48,6 +49,5 @@
 13. Sayfanın sağ-üst köşesinde bir Amazon Resource Identifier / ARN ("Amazon Kaynak Kimliği / AKK") göreceksiniz. Bu değer ilgili lambda fonksiyonu için benzersiz kimlik görevi yapar.  Bu eğitimin sonraki aşamalarında kullanmak üzere **bu ARN (AKK) değerini saklayın (bir kopyasını alın)**.
 
     ![Copy ARN](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/2-12-copy-ARN._TTH_.png)
-<!--TODO: THIS IMAGE NEEDS TO BE CUSTOMIZED FOR YOUR SKILL TEMPLATE. -->
 
 [![Next](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/buttons/button_next_connect_vui_to_code._TTH_.png)](./3-connect-vui-to-code.md)
