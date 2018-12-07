@@ -7,8 +7,7 @@
 
  [Bu eğitimin ilk adımında](./1-voice-user-interface.md), Alexa yeteneğimiz için bir Ses Arayüzü geliştirdik.  Şimdiki adımda ise, [Amazon Web Services](http://aws.amazon.com) altyapısı kullanarak bir AWS Lambda fonksiyonu yaratacağız. Lambda fonksiyonları hakkında detaylı bilgiyi [burada okuyabilirsiniz (İngilizce)](http://aws.amazon.com/lambda); bu eğitim için bilmeniz gereken, kodumuzun AWS Lambda'da yer alacağıdır. Kullanıcılar Alexa yeteneğimizi kullanmak istediklerinde, gerekli etkileşimi yürüten ve kullanıcılarla konuşan, Lambda fonksiyonumuz olacaktır.
 
- 1.  **http://aws.amazon.com sayfasına gidin ve konsola giriş yapın.**
- If you don't already have an account, you will need to create one.  [Henüz bir AWS hesabınız bulunmuyorsa, yeni hesap açmak için buradaki açıklamaları takip edin (İngilizce).](https://github.com/alexa/alexa-cookbook/tree/master/aws/set-up-aws.md)
+ 1.  **http://aws.amazon.com sayfasına gidin ve konsola giriş yapın.** [Henüz bir AWS hesabınız bulunmuyorsa, yeni hesap açmak için bu linkdeki açıklamaları takip edin (İngilizce).](https://github.com/alexa/alexa-cookbook/tree/master/aws/set-up-aws.md)
  
     [![Developer Console](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/2-1-sign-in-to-the-console._TTH_.png)](https://console.aws.amazon.com/console/home)
 
