@@ -1,52 +1,52 @@
-# Build An Alexa Hello World Skill
+# Bir Alexa Merhaba Dünya Yeteneği Geliştirin
 <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/header._TTH_.png" />
 
 [![Voice User Interface](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/1-locked._TTH_.png)](./1-voice-user-interface.md)[![Lambda Function](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/2-on._TTH_.png)](./2-lambda-function.md)[![Connect VUI to Code](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/3-locked._TTH_.png)](./3-connect-vui-to-code.md)[![Testing](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/4-locked._TTH_.png)](./4-testing.md)[![Next Steps](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/5-locked._TTH_.png)](./5-next-steps.md)
 
-## Setting Up A Lambda Function Using Amazon Web Services
+## Amazon Web Services Altyapısı Kullanarak bir Lambda Fonksiyonunun Hazırlanması
 
-In the [first step of this guide](./1-voice-user-interface.md), we built the Voice User Interface (VUI) for our Alexa skill.  On this page, we will be creating an AWS Lambda function using [Amazon Web Services](http://aws.amazon.com).  You can [read more about what a Lambda function is](http://aws.amazon.com/lambda), but for the purposes of this guide, what you need to know is that AWS Lambda is where our code lives.  When a user asks Alexa to use our skill, it is our AWS Lambda function that interprets the appropriate interaction, and provides the conversation back to the user.
+ [Bu eğitimin ilk adımında](./1-voice-user-interface.md), Alexa yeteneğimiz için bir Ses Arayüzü geliştirdik.  Şimdiki adımda ise, [Amazon Web Services](http://aws.amazon.com) altyapısı kullanarak bir AWS Lambda fonksiyonu yaratacağız. Lambda fonksiyonları hakkında detaylı bilgiyi [burada okuyabilirsiniz (İngilizce)](http://aws.amazon.com/lambda); bu eğitim için bilmeniz gereken, kodumuzun AWS Lambda'da yer alacağıdır. Kullanıcılar Alexa yeteneğimizi kullanmak istediklerinde, gerekli etkileşimi yürüten ve kullanıcılarla konuşan, Lambda fonksiyonumuz olacaktır.
 
-1.  **Go to http://aws.amazon.com and sign in to the console.** If you don't already have an account, you will need to create one.  [If you don't have an AWS account, check out this quick walkthrough for setting it up](https://github.com/alexa/alexa-cookbook/tree/master/aws/set-up-aws.md).
-
+ 1.  **http://aws.amazon.com sayfasına gidin ve konsola giriş yapın.**
+ If you don't already have an account, you will need to create one.  [Henüz bir AWS hesabınız bulunmuyorsa, yeni hesap açmak için buradaki açıklamaları takip edin (İngilizce).](https://github.com/alexa/alexa-cookbook/tree/master/aws/set-up-aws.md)
+ 
     [![Developer Console](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/2-1-sign-in-to-the-console._TTH_.png)](https://console.aws.amazon.com/console/home)
 
-2.  **Click "Services" at the top of the screen, and type "Lambda" in the search box.**  You can also find Lambda in the list of services.  It is in the "Compute" section.
+2.  **Açılan sayfanın üst kısmında yer alan "Services" ("Hizmetler") linkini tıklayın ve ekrana gelen arama alanına "Lambda" kelimesini girin.**  Lambda hizmeti sayfanın "Compute" ("Bilgi İşleme") hizmeti bölümünde de bulunur.
 
     [![Lambda](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/2-2-services-lambda._TTH_.png)](https://console.aws.amazon.com/lambda/home)
 
-3.  **Check your AWS region.** AWS Lambda only works with the Alexa Skills Kit in these regions: US East (N. Virginia), US West (Oregon), Asia Pacific (Tokyo)  and EU (Ireland).  Make sure you choose the region closest to your customers.
+3.  **Seçili olan AWS bölgenizi kontrol edin.** AWS Lambda hizmeti, Alexa Yetenek Kiti'ni şu bölgelerde destekler: ABD Doğu (N. Virginia), ABD Batı (Oregon), Asya Pasifik (Tokyo) ve AB (İrlanda).  Müşterilerinize en yakın olan bölgeyi seçtiğinize emin olun (yeteneğinizi Türkiye'den ya da Avrupa'dan kullanan müşterileriniz için AB İrlanda bölgesi).
 
     ![Check Region](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/2-3-check-region._TTH_.png)
 
-4.  **Click the orange "Create function" button.** It should be near the top of your screen.  (If you don't see this button, it is because you haven't created a Lambda function before.  Click the blue "Get Started" button near the center of your screen.)
+4.  **Turuncu renkli "Create function" ("Fonksiyon yarat") butonunu tıklayın.** Buton ekranın üst kısmında bulunur.
 
     ![Create lambda function](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/2-4-create-a-lambda-function._TTH_.png)
 
-5.  There are three boxes labeled "Author from scratch", "Blueprints" and "AWS Serverless Application Repository". **Click the radio button in the box titled  "AWS Serverless Application Repository"**  We have created an application in the repository as a shortcut to getting everything set up for your skill.
+5.  Açılan sayfada üç adet buton bulunmaktadır: "Author from scratch" ("Sıfırdan başlayın"), "Blueprints" ("Şablonlar") ve "AWS Serverless Application Repository" ("AWS Sunucusuz Uygulama Deposu"). **"AWS Sunucusuz Uygulama Deposu" butonunu tıklayın.**  Söz konusu depoda, yeteneğiniz için gerekli olan tüm kod mantığını içeren hazır bir uygulama bulunmaktadır.
 
-6. **Enter `fact` to search for the application repository named `alexa-skills-kit-nodejs-factskill`.** Enter the full name into the serach box if you need to narrow the search results.
+6. **`alexa-skills-kit-nodejs-factskill` isimli uygulama deposunu aramak için arama kutusuna `fact` ("bilgi") kelimesini girin.** Arama sonuçlarının sayısını sınırlandırmak için gerekirse arama kutusuna deponun tam ismini girin.
 
-> _Note: we are using the fact skill to create the Lambda function and will be replacing the code in a later step._
+> _Not: Söz konusu yeteneği kullanarak önce Lambda fonksiyonunu yaratacağız, sonraki adımlarda ise kodu değiştireceğiz._
 
-7. **Click on the application.** This template will create the Lambda function, grant the Alexa Skills Kit permission to invoke it, and set up an IAM role for you. It will also add the code from this GitHub repo and include the required dependencies so that you don't have to upload them yourself.
+7. **Uygulamayı tıklayın.** Böylece Lambda fonksiyonu yaratılacak, Alexa Yetenek Kiti'ne fonksiyonu çağırma yetkisi verilecek, ve sizin için bir IAM ("Kimlik ve Erişim Yönetimi") rolü tanınacaktır.  Ayrıca ilgili GitHub deposundaki kod ve bağımlı paketler sizin birşey yapmanıza gerek kalmadan otomatik olarak yüklenecektir.
 
-    <!-- <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/fact/2-5-blueprint._TTH_.png" />  <!--TODO: THIS IMAGE NEEDS TO BE CUSTOMIZED FOR YOUR SKILL TEMPLATE, THIS ONE IS OUT OF DATE. -->
-8. Change the application name if so desired and then **Click the deploy button** at the bottom of the page.
+8. İsterseniz uygulamanın adını değiştirin, sonra sayfanın sağ-alt kısmındaki **"Deploy" ("Konuşlandır") butonunu tıklayın.**
 
-9. Wait for the status of all resources to change to **CREATE_COMPLETE**
+9. Tüm kaynakların **CREATE_COMPLETE ("Oluşturma Tamamlandı")** durumuna gelmesini bekleyin.
 
-10. Click the **Test App** button to go to the Lambda console.
+10. Lambda konsoluna geçmek için **Test App ("Uygulama Testi")** butonunu tıklayın.
 
-11. **Open** the function that was **just created** by clicking on it.
+11. **Yeni yaratılan** fonksiyonu, üzerine tıklayarak **açın**.
 
-12. (Optional, but recommended) To **secure this Lambda function** follow the instructions found [here](https://github.com/alexa/alexa-cookbook/blob/master/aws/secure-lambda-function.md)
+12. (Opsiyonel, uygulanması önerilir) **Söz konusu Lambda fonksiyonu güvenli hale getirmek için** [bu linkdeki (İngilizce)](https://github.com/alexa/alexa-cookbook/blob/master/aws/secure-lambda-function.md) talimatları yerine getirin.
 
-13. Scroll down the page until you see a section called **Function code**.
+13. Sayfayı aşağı kaydırın ve **Function code ("Fonksiyon kodu")** bölümüne gelin.
 
-11. **Open** this Lambda function [source code file](../lambda/custom/index.js), copy the contents of the file, and paste it into the index.js file found in the Lambda code editor.  Don't forget to Save.
+11. Şu linkde bulunan Lambda fonksiyonu **açın**: [Kaynak kod dosyası](../lambda/custom/index.js). Dosyanın içeriğini kopyalayın, Lambda kod editöründe yer alan index.js dosyası üzerine yapıştırın.  Saklamayı unutmayın.
 
-13. In the top right corner of the page, you should see the Amazon Resource Name (ARN), which is a unique identifier for this lambda function. **Make a copy of this ARN value** for use in the next section of this guide.
+13. Sayfanın sağ-üst köşesinde bir Amazon Resource Identifier / ARN ("Amazon Kaynak Kimliği / AKK") göreceksiniz. Bu değer ilgili lambda fonksiyonu için benzersiz kimlik görevi yapar.  Bu eğitimin sonraki aşamalarında kullanmak üzere **bu ARN (AKK) değerini saklayın (bir kopyasını alın)**.
 
     ![Copy ARN](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/2-12-copy-ARN._TTH_.png)
 <!--TODO: THIS IMAGE NEEDS TO BE CUSTOMIZED FOR YOUR SKILL TEMPLATE. -->

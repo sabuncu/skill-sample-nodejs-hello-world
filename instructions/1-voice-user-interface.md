@@ -1,36 +1,37 @@
-# Build An Alexa Hello World Skill
+# Bir Alexa Merhaba Dünya Yeteneği Geliştirin
 <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/header._TTH_.png" />
 
 [![Voice User Interface](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/1-on._TTH_.png)](./1-voice-user-interface.md)[![Lambda Function](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/2-locked._TTH_.png)](./2-lambda-function.md)[![Connect VUI to Code](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/3-locked._TTH_.png)](./3-connect-vui-to-code.md)[![Testing](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/4-locked._TTH_.png)](./4-testing.md)[![Next Steps](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/5-locked._TTH_.png)](./5-next-steps.md)
 
-1.  **Go to the [Amazon Alexa Developer Portal](http://developer.amazon.com/alexa?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Survey&sc_detail=hello-world-nodejs-V2_GUI-1&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Survey_hello-world-nodejs-V2_GUI-1_Convert_WW_beginnersdevs&sc_segment=beginnersdevs).  In the top-right corner of the screen, click the "Sign In" button.**
-(If you don't already have an account, you will be able to create a new one for free.)
+1.  **[Amazon Alexa Geliştiricileri Ana Sayfası](http://developer.amazon.com/alexa?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Survey&sc_detail=hello-world-nodejs-V2_GUI-1&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Survey_hello-world-nodejs-V2_GUI-1_Convert_WW_beginnersdevs&sc_segment=beginnersdevs)'nı ziyaret edin.  Sayfanın sağ-üst köşesindeki "Sign In" ("Kayıt Ol") butonunu tıklayın.**
+(Henüz bir Amazon hesabınız bulunmuyorsa, ücretsiz hesap açabilirsiniz.)
 
-2.  Once you have signed in, hover your mouse over the **Your Alexa Consoles** text at the top-right section of the screen and Select the **Skills** Link from the drop-down menu.
+2.  Giriş yaptıktan sonra, farenizi ekranın sağ-üst kısmındaki **Your Alexa Consoles ("Alexa Konsollarınız")** yazısı üzerinde tutun ve açılan menüde **Skills ("Yetenekler")** linkini tıklayın.
 
-3.  From the **Alexa Skills Kit Developer Console**, click the **Create Skill** button on the right-side of the page. (If this is your first skill, an additional **Create Skill** button will also be present in the center of the page.)
+3.  Açılan **Alexa Developer Console ("Alexa Geliştirici Konsolu")** sayfasında, sayfanın sağ tarafındaki **Create Skill ("Yetenek Yarat")** butonunu tıklayın.  (Bu yaratacağınız ilk yetenek ise, sayfanın ortasında aynı işlevi gören bir **Yetenek Yarat** butonu daha bulunacaktır.)
 
-4. Give your new skill a **Skill name**. This is the name that will be shown in the Alexa Skills Store, and the name your users will refer to. Your skill name may include spaces. For the sake of simplicity, we'll just use **English (US)** for the **Default language** selection.  (You can add other languages later.)
+4.  Sonraki sayfada yeteneğinize bir **Skill name ("Yetenek adı")** verin.  Bu ad, Alexa Skills Store (Alexa Yetenek Mağazası)'nda gösterilecektir ve kullanıcılarınız yeteneğinizi bu ad ile çağıracaktır.  Yetenek adınız boşluk içerebilir.  Eğitimi basit tutmak amacıyla **Default language ("Varsayılan dil")**  için burada **English (US)** (**"İngilizce (ABD)"**) seçeneğini kullanacağız. (Başka dil seçeneklerini daha sonra ekleyebilirsiniz.)
 
-5. The **Custom** model will be pre-selected by default; keep this selection. Click the **Create Skill** button at top right.
+5.  Sayfanın **Choose a model to add to your skill ("Yeteneğinize eklemek için model seçin")** kısmında, **Custom ("Özel")** modelin ön-seçimli olduğunu göreceksiniz; bu seçeneği koruyarak sayfanın sağ-üst kısmındaki **Create Skill ("Yetenek Yarat")** butonunu tıklayın.
 
-6. In the **Choose a template** page, the **Start from scratch** template will be pre-selected; keep this selection. Click the **Choose** button at top right.
+6.  Yeni açılan **Choose a template ("Şablon seçimi")** sayfasında **Start from scratch ("Sıfırdan başlayın")** şablonunun ön-seçimli olduğunu göreceksiniz. Bu seçeneği koruyarak sayfanın sağ-üst kısmındaki **Choose ("Seçim yapın")** butonunu tıklayın.
 
-7. The console **Build** tab will be displayed.  **Build the Interaction Model for your skill**:
-    1. On the left hand navigation panel, select the **JSON Editor** tab under **Interaction Model**. In the textfield provided, replace any existing code with the code provided in the [Interaction Model](../models/en-US.json).  Click **Save Model**.
-    2. If you want to change the skill invocation name, select the **Invocation** tab. Enter a **Skill Invocation Name**. This is the name that your users will need to say to start your skill.  In this case, it's preconfigured to be 'hello world'.
-    3. Click "Build Model".
+7.  Şimdi, Alexa Geliştirici Konsolu'nun **Build ("Geliştirme")** sekmesi gösterilecektir.  **Artık yeteneğinizin ektileşim modelini geliştirmeye başlayabilirsiniz**:
 
-	**Note:** You should notice that **Intents** and **Slot Types** will auto populate based on the JSON Interaction Model that you have now applied to your skill. Feel free to explore the changes here; to learn about **Intents**, **Slots**, and **Utterances** open our [technical documentation in a new tab](https://developer.amazon.com/docs/custom-skills/create-intents-utterances-and-slots.html?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Survey&sc_detail=hello-world-nodejs-V2_GUI-1&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Survey_hello-world-nodejs-V2_GUI-1_Convert_WW_beginnersdevs&sc_segment=beginnersdevs).
+    1. Soldaki navigasyon panelinde bulunan **Interaction Model ("Etkileşim Modeli")** başlığı altındaki **JSON Editor ("JSON Editörü")** sekmesini seçin.  Açılan metin panelinde gösterilen kod yerine, [Interaction Model ("Etkileşim Modeli")](../models/en-US.json) linkinde verilen kodu kopyalayıp yapıştırın.  Sayfanın sol-üst kısmında bulunan **Save Model ("Modeli Sakla")** butonunu tıklayın.
+    2. Skill Invocation Name ("Yetenek Çağrı Adı")'nı değiştirmek istiyorsanız, **Invocation ("Çağırma")** sekmesini tıklayın.  **Skill Invocation Name ("Yetenek Çağrı Adı")** alanını doldurun.  Kullanıcılarınız yeteneğinizi işleme koymak için bu çağrı adını söyleyecektir.  Bu örnekteki çağrı adı 'hello world' ("merhaba dünya") olarak önceden ayarlanmıştır.
+    3. "Build Model" ("Modeli Yarat") butonunu tıklayın.
 
-8. **Optional:** Select an intent by expanding the **Intents** from the left side navigation panel. Add some more sample utterances for your newly generated intents. Think of all the different ways that a user could request to make a specific intent happen. A few examples are provided. Be sure to click **Save Model** and **Build Model** after you're done making changes here.
+    **Not:** **Intents ("Amaçlar")** ve **Slot Types ("Yuva Türleri")** alanlarının, modelinize uyguladığınız JSON Interaction Model ("JSON Etkileşim Modeli") temel alınmak üzere otomatik olarak doldurulduğunu göreceksiniz.  Bu alanlarda farklı değerler denemekten çekinmeyin.  **Amaçlar**, **Yuvalar** ve **Utterances ("Söyleyişler")** konularında daha fazla bilgi edinmek için [ilgili teknik dokümantasyon sayfamıza (İngilizce)](https://developer.amazon.com/docs/custom-skills/create-intents-utterances-and-slots.html?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Survey&sc_detail=hello-world-nodejs-V2_GUI-1&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Survey_hello-world-nodejs-V2_GUI-1_Convert_WW_beginnersdevs&sc_segment=beginnersdevs) bakabilirsiniz (yeni pencere açılacaktır).
 
-9. If your interaction model builds successfully, proceed to the next step. If not, you should see an error. Try to resolve the errors. In our next step of this guide, we will be creating our Lambda function in the AWS developer console, but keep this browser tab open, because we will be returning here on [Page #3: Connect VUI to Code](./3-connect-vui-to-code.md).
+8. **Opsiyonel:** Soldaki navigasyon panelinde **Intents ("Amaçlar")** sekmesini açarak bir amaç seçin.  Yeni üretilen amaçlarınıza örnek söyleyişler ekleyin.  Belirli bir amacı kullanmaya yönelik olarak bir kullanıcı tarafından söylenmesi olası olan tüm farklı yöntemleri değerlendirin.  Sayfada bazı örnekler verilmiştir. Yaptığınız değişiklikleri tamamladıktan sonra sayfadaki **Save Model ("Modeli Sakla")** ve **Build Model ("Modeli Yarat")** butonlarını sırasıyla tıklamayı unutmayın.
+
+9. Etkileşim modeliniz başarılı olarak yaratılırsa, bir sonraki adıma geçin.  Aksi halde bir hata mesajı gösterilecektir. Hataları çözümlemeye çalışın. Bu eğitimin sonraki adımlarında AWS geliştirici konsolunu kullanarak Lambda fonksiyonumuzu yaratacağız, fakat tarayıcınızda bu sayfayı açık tutun, çünkü [Page #3: Connect VUI to Code ("Sayfa 3: Ses Arayüzünü Koda Bağlayın")](./3-connect-vui-to-code.md) kısmında tekrar buraya döneceğiz.
 
 
-     If you get an error from your interaction model, check through this list:
+     Etkileşim modelinizde bir hata ile karşılaşırsanız, çözüm için lütfen aşağıdaki adımları deneyin:
 
-     *  **Did you copy & paste the provided code correctly?**
-     *  **Did you accidentally add any characters to the Interaction Model?**
+     *  **Verilen kodu doğru şekilde kopyalayıp yapıştırdınız mı?**
+     *  **Etkileşim Modeli'ne yanlışlıkla fazladan karakter girmiş olabilir misiniz?**
 
-[![Next](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/buttons/button_next_lambda_function._TTH_.png)](./2-lambda-function.md)
+[![Sonraki Adım](https://user-images.githubusercontent.com/6242253/49443232-f5974f00-f7dc-11e8-95cd-9561ab658856.png)](./2-lambda-function.md)
