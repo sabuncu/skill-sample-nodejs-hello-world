@@ -12,25 +12,25 @@
      [![Developer Console](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/2-1-sign-in-to-the-console._TTH_.png)](https://console.aws.amazon.com/console/home)
     
 
-2.  **Açılan sayfanın üst kısmında yer alan "Services" ("Hizmetler") linkini tıklayın ve ekrana gelen arama alanına "Lambda" kelimesini girin.**  Lambda hizmeti sayfanın "Compute" ("Bilgi İşleme") hizmeti bölümünde de bulunur.
+2.  **Açılan sayfanın üst kısmında yer alan "Services" ("Hizmetler") linkini tıklayın ve ekrana gelen arama alanına "Lambda" kelimesini girin.**  Lambda hizmetini sayfanın "Compute" ("Bilgi İşleme") hizmetleri bölümünde de bulabilirsiniz.
 
     [![Lambda](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/2-2-services-lambda._TTH_.png)](https://console.aws.amazon.com/lambda/home)
 
-3.  **Seçili olan AWS bölgenizi kontrol edin.** AWS Lambda hizmeti, Alexa Yetenek Kiti'ni şu bölgelerde destekler: ABD Doğu (N. Virginia), ABD Batı (Oregon), Asya Pasifik (Tokyo) ve AB (İrlanda).  Müşterilerinize en yakın olan bölgeyi seçtiğinize emin olun (yeteneğinizi Türkiye'den ya da Avrupa'dan kullanan müşterileriniz için AB İrlanda bölgesi).
+3.  **Seçili olan AWS bölgenizi kontrol edin.** AWS Lambda hizmeti, Alexa Yetenek Kiti'ni halen şu bölgelerde destekler: ABD Doğu (N. Virginia), ABD Batı (Oregon), Asya Pasifik (Tokyo) ve AB (İrlanda).  Müşterilerinize en yakın olan bölgeyi seçtiğinize emin olun (yeteneğinizi Türkiye ya da Avrupa'dan kullanan müşterileriniz için AB İrlanda bölgesini seçin).
 
     ![Check Region](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/2-3-check-region._TTH_.png)
 
 4.  **Turuncu renkli "Create function" ("Fonksiyon yarat") butonunu tıklayın.** Buton ekranın üst kısmında bulunur.
 
-    ![Create lambda function](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/2-4-create-a-lambda-function._TTH_.png)
+    ![Create a function](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/2-4-create-a-lambda-function._TTH_.png)
 
-5.  Açılan sayfada üç adet buton bulunmaktadır: "Author from scratch" ("Sıfırdan başlayın"), "Blueprints" ("Şablonlar") ve "AWS Serverless Application Repository" ("AWS Sunucusuz Uygulama Deposu"). **"AWS Sunucusuz Uygulama Deposu" butonunu tıklayın.**  Söz konusu depoda, yeteneğiniz için gerekli olan tüm kod mantığını içeren hazır bir uygulama bulunmaktadır.
+5.  Açılan sayfada üç adet buton yer alacaktır: "Author from scratch" ("Sıfırdan başlayın"), "Blueprints" ("Şablonlar") ve "AWS Serverless Application Repository" ("AWS Sunucusuz Uygulama Deposu"). **"AWS Serverless Application Repository" butonunu tıklayın.**  Söz konusu depoda, yeteneğiniz için gerekli olan tüm kod mantığını içeren hazır bir uygulama bulunmaktadır.
 
 6. **`alexa-skills-kit-nodejs-factskill` isimli uygulama deposunu aramak için arama kutusuna `fact` ("bilgi") kelimesini girin.** Arama sonuçlarının sayısını sınırlandırmak için gerekirse arama kutusuna deponun tam ismini girin.
 
-> _Not: Söz konusu yeteneği kullanarak önce Lambda fonksiyonunu yaratacağız, sonraki adımlarda ise kodu değiştireceğiz._
+> _Not: Söz konusu yeteneği kullanarak önce Lambda fonksiyonunu yaratacağız, sonraki adımlarımızda ise fonksiyonun kodunu değiştireceğiz._
 
-7. **Uygulamayı tıklayın.** Böylece Lambda fonksiyonu yaratılacak, Alexa Yetenek Kiti'ne fonksiyonu çağırma yetkisi verilecek, ve sizin için bir IAM ("Kimlik ve Erişim Yönetimi") rolü tanınacaktır.  Ayrıca ilgili GitHub deposundaki kod ve bağımlı paketler sizin birşey yapmanıza gerek kalmadan otomatik olarak yüklenecektir.
+7. **Uygulama linkini tıklayın.** Böylece Lambda fonksiyonu yaratılacak, Alexa Yetenek Kiti'ne fonksiyonu çağırma yetkisi verilecek, ve sizin için bir IAM ("Kimlik ve Erişim Yönetimi") rolü tanınacaktır.  Ayrıca ilgili GitHub deposundaki kod ve bağımlı paketler sizin birşey yapmanıza gerek kalmadan otomatik olarak yüklenecektir.
 
 8. İsterseniz uygulamanın adını değiştirin, sonra sayfanın sağ-alt kısmındaki **"Deploy" ("Konuşlandır") butonunu tıklayın.**
 

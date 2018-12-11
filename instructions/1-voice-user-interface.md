@@ -1,7 +1,11 @@
 # Bir Alexa Merhaba Dünya Yeteneği Geliştirin
 <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/header._TTH_.png" />
 
-[![Voice User Interface](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/1-on._TTH_.png)](./1-voice-user-interface.md)[![Lambda Function](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/2-locked._TTH_.png)](./2-lambda-function.md)[![Connect VUI to Code](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/3-locked._TTH_.png)](./3-connect-vui-to-code.md)[![Testing](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/4-locked._TTH_.png)](./4-testing.md)[![Next Steps](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/5-locked._TTH_.png)](./5-next-steps.md)
+[![Ses Arayüzü (SA)](https://user-images.githubusercontent.com/6242253/49790798-27119c80-fd40-11e8-9845-23784f825500.png)](./1-voice-user-interface.md)
+[![Lambda Fonksiyonu](https://user-images.githubusercontent.com/6242253/49790804-2973f680-fd40-11e8-8932-fe79a3bff929.png)](./2-lambda-function.md)
+[![SA'yı Koda Bağla](https://user-images.githubusercontent.com/6242253/49790840-3abd0300-fd40-11e8-9414-849bb162e09e.png)](./3-connect-vui-to-code.md)
+[![Testler](https://user-images.githubusercontent.com/6242253/49792890-e405f800-fd44-11e8-943d-ce4727fd1e97.png)](./4-testing.md)
+[![Uyarlamalar](https://user-images.githubusercontent.com/6242253/49790859-43add480-fd40-11e8-87e5-2daea3d4f005.png)](./5-next-steps.md)
 
 1.  **[Amazon Alexa Geliştiricileri Ana Sayfası](http://developer.amazon.com/alexa?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Survey&sc_detail=hello-world-nodejs-V2_GUI-1&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Survey_hello-world-nodejs-V2_GUI-1_Convert_WW_beginnersdevs&sc_segment=beginnersdevs)'nı ziyaret edin.  Sayfanın sağ-üst köşesindeki "Sign In" ("Kayıt Ol") butonunu tıklayın.**
 (Henüz bir Amazon hesabınız bulunmuyorsa, ücretsiz hesap açabilirsiniz.)
