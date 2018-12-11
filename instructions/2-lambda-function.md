@@ -20,7 +20,7 @@
 
     [![Lambda](https://user-images.githubusercontent.com/6242253/49803614-584e9480-fd61-11e8-94ca-87fa50673d73.png)](https://console.aws.amazon.com/lambda/home)
 
-3.  **Seçili olan AWS bölgenizi kontrol edin.** AWS Lambda hizmeti, Alexa Yetenek Kiti'ni halen şu bölgelerde destekler: ABD Doğu (N. Virginia), ABD Batı (Oregon), Asya Pasifik (Tokyo) ve AB (İrlanda).  Müşterilerinize en yakın olan bölgeyi seçtiğinize emin olun (yeteneğinizi Türkiye ya da Avrupa'dan kullanan müşterileriniz için AB İrlanda bölgesini seçin).
+3.  **Seçili olan AWS bölgenizi kontrol edin.** AWS Lambda hizmeti, Alexa Yetenek Kiti'ni halen şu bölgelerde destekler: ABD Doğu (N. Virginia), ABD Batı (Oregon), Asya Pasifik (Tokyo) ve AB (İrlanda).  Müşterilerinize en yakın olan bölgeyi seçtiğinize emin olun. Yeteneğinizi Türkiye ya da Avrupa'dan kullanan müşterileriniz için AB İrlanda (EU Ireland) bölgesini seçin.
 
     ![Check Region](https://user-images.githubusercontent.com/6242253/49803618-5d134880-fd61-11e8-9cf9-67a6cef724a2.png)
 
