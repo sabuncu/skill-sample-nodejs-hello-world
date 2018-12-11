@@ -1,7 +1,11 @@
 # Bir Alexa Merhaba Dünya Yeteneği Geliştirin
 <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/header._TTH_.png" />
 
-[![Voice User Interface](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/1-locked._TTH_.png)](./1-voice-user-interface.md)[![Lambda Function](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/2-on._TTH_.png)](./2-lambda-function.md)[![Connect VUI to Code](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/3-locked._TTH_.png)](./3-connect-vui-to-code.md)[![Testing](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/4-locked._TTH_.png)](./4-testing.md)[![Next Steps](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/5-locked._TTH_.png)](./5-next-steps.md)
+[![Ses Arayüzü (SA)](https://user-images.githubusercontent.com/6242253/49790785-1f51f800-fd40-11e8-9f61-5adad636aa37.png)](./1-voice-user-interface.md)
+[![Lambda Fonksiyonu SEÇİLİ](https://user-images.githubusercontent.com/6242253/49790810-2bd65080-fd40-11e8-8963-dc937183a352.png)](./2-lambda-function.md)
+[![SA'yı Koda Bağla](https://user-images.githubusercontent.com/6242253/49790840-3abd0300-fd40-11e8-9414-849bb162e09e.png)](./3-connect-vui-to-code.md)
+[![Testler](https://user-images.githubusercontent.com/6242253/49797809-a065bb00-fd51-11e8-8ebc-c1d210e888f6.png)](./4-testing.md)
+[![Uyarlamalar](https://user-images.githubusercontent.com/6242253/49790859-43add480-fd40-11e8-87e5-2daea3d4f005.png)](./5-next-steps.md)
 
 ## Amazon Web Services Altyapısı Kullanarak bir Lambda Fonksiyonunun Hazırlanması
 
@@ -9,20 +13,20 @@
 
  1.  **http://aws.amazon.com sayfasına gidin ve konsola giriş yapın.** [Henüz bir AWS hesabınız bulunmuyorsa, yeni hesap açmak için bu linkdeki açıklamaları takip edin (İngilizce).](https://github.com/alexa/alexa-cookbook/tree/master/aws/set-up-aws.md)
  
-     [![Developer Console](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/2-1-sign-in-to-the-console._TTH_.png)](https://console.aws.amazon.com/console/home)
+     [![Developer Console](https://user-images.githubusercontent.com/6242253/49803604-54227700-fd61-11e8-9b8b-16a097d0c9c8.png)](https://console.aws.amazon.com/console/home)
     
 
 2.  **Açılan sayfanın üst kısmında yer alan "Services" ("Hizmetler") linkini tıklayın ve ekrana gelen arama alanına "Lambda" kelimesini girin.**  Lambda hizmetini sayfanın "Compute" ("Bilgi İşleme") hizmetleri bölümünde de bulabilirsiniz.
 
-    [![Lambda](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/2-2-services-lambda._TTH_.png)](https://console.aws.amazon.com/lambda/home)
+    [![Lambda](https://user-images.githubusercontent.com/6242253/49803614-584e9480-fd61-11e8-94ca-87fa50673d73.png)](https://console.aws.amazon.com/lambda/home)
 
 3.  **Seçili olan AWS bölgenizi kontrol edin.** AWS Lambda hizmeti, Alexa Yetenek Kiti'ni halen şu bölgelerde destekler: ABD Doğu (N. Virginia), ABD Batı (Oregon), Asya Pasifik (Tokyo) ve AB (İrlanda).  Müşterilerinize en yakın olan bölgeyi seçtiğinize emin olun (yeteneğinizi Türkiye ya da Avrupa'dan kullanan müşterileriniz için AB İrlanda bölgesini seçin).
 
-    ![Check Region](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/2-3-check-region._TTH_.png)
+    ![Check Region](https://user-images.githubusercontent.com/6242253/49803618-5d134880-fd61-11e8-9cf9-67a6cef724a2.png)
 
 4.  **Turuncu renkli "Create function" ("Fonksiyon yarat") butonunu tıklayın.** Buton ekranın üst kısmında bulunur.
 
-    ![Create a function](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/2-4-create-a-lambda-function._TTH_.png)
+    ![Create a function](https://user-images.githubusercontent.com/6242253/49803627-60a6cf80-fd61-11e8-8822-3cfb7cf9eae1.png)
 
 5.  Açılan sayfada üç adet buton yer alacaktır: "Author from scratch" ("Sıfırdan başlayın"), "Blueprints" ("Şablonlar") ve "AWS Serverless Application Repository" ("AWS Sunucusuz Uygulama Deposu"). **"AWS Serverless Application Repository" butonunu tıklayın.**  Söz konusu depoda, yeteneğiniz için gerekli olan tüm kod mantığını içeren hazır bir uygulama bulunmaktadır.
 
@@ -50,4 +54,4 @@
 
     ![Copy ARN](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/2-12-copy-ARN._TTH_.png)
 
-[![Next](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/buttons/button_next_connect_vui_to_code._TTH_.png)](./3-connect-vui-to-code.md)
+[![Next](https://user-images.githubusercontent.com/6242253/49804343-60a7cf00-fd63-11e8-88bf-ee3a538967ac.png)](./3-connect-vui-to-code.md)

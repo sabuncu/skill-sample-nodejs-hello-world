@@ -1,7 +1,7 @@
 # Bir Alexa Merhaba Dünya Yeteneği Geliştirin
 <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/header._TTH_.png" />
 
-[![Ses Arayüzü (SA)](https://user-images.githubusercontent.com/6242253/49790798-27119c80-fd40-11e8-9845-23784f825500.png)](./1-voice-user-interface.md)
+[![Ses Arayüzü (SA) SEÇİLİ](https://user-images.githubusercontent.com/6242253/49790798-27119c80-fd40-11e8-9845-23784f825500.png)](./1-voice-user-interface.md)
 [![Lambda Fonksiyonu](https://user-images.githubusercontent.com/6242253/49790804-2973f680-fd40-11e8-8932-fe79a3bff929.png)](./2-lambda-function.md)
 [![SA'yı Koda Bağla](https://user-images.githubusercontent.com/6242253/49790840-3abd0300-fd40-11e8-9414-849bb162e09e.png)](./3-connect-vui-to-code.md)
 [![Testler](https://user-images.githubusercontent.com/6242253/49797809-a065bb00-fd51-11e8-8ebc-c1d210e888f6.png)](./4-testing.md)
