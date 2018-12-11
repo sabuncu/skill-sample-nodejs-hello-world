@@ -65,4 +65,4 @@ Bu aşamadan önce [bir Ses Arayüzü](./1-voice-user-interface.md) ve [bir Lamb
 
 8.  **If your sample skill is working properly, you can now customize your skill.**
 
-[![Next](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/buttons/button_next_customization._TTH_.png)](./5-next-steps.md)
+[![Next](https://user-images.githubusercontent.com/6242253/49828294-91582a80-fd9c-11e8-98f1-48ac6212ed16.png)](./5-next-steps.md)
