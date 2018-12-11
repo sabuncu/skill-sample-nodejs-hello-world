@@ -1,4 +1,4 @@
-# Bir Alexa Merhaba Dünya Yeteneği Geliştirin
+# Bir 'Alexa Merhaba Dünya' Yeteneği Geliştirin
 <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/header._TTH_.png" />
 
 [![Ses Arayüzü (SA)](https://user-images.githubusercontent.com/6242253/49790785-1f51f800-fd40-11e8-9f61-5adad636aa37.png)](./1-voice-user-interface.md)
@@ -11,7 +11,7 @@
 
 Bu eğitimin [1. sayfasında](./1-voice-user-interface.md), kullanılmasını beklediğimiz niyet (intent) ve söyleyişler (utterances) için bir ses arayüzü geliştirdik.  Eğitimin [2. sayfasında](./2-lambda-function.md) yeteneğimizin mantığını içeren bir Lambda fonksiyonu yarattık.  Şimdi ise, söz konusu iki bileşeni birbirlerine bağlamamız gerekiyor.
 
-1.  **[Amazon Alexa Geliştiricileri Ana Sayfası](https://developer.amazon.com/alexa/console/ask?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Survey&sc_detail=hello-world-nodejs-V2_GUI-3&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Survey_hello-world-nodejs-V2_GUI-3_Convert_WW_beginnersdevs&sc_segment=beginnersdevs)'nı tekrar ziyaret edin ve yeteneğinizi listeden seçin.** Bu eğitime en baştan başladıysanız, ilgili sayfa halen tarayıcınızın sekmesinde açılı durumda olabilir.
+1.  **[Amazon Alexa Geliştiricileri Ana Sayfası](https://developer.amazon.com/alexa/console/ask?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Survey&sc_detail=hello-world-nodejs-V2_GUI-3&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Survey_hello-world-nodejs-V2_GUI-3_Convert_WW_beginnersdevs&sc_segment=beginnersdevs)'nı tekrar ziyaret edin ve yeteneğinizi listeden seçin.** Not: Eğitime en başdan başladıysanız, ilgili sayfa halen tarayıcı sekmenizde açılı durumda olabilir.
 
 2. Navigasyon panelinin sol tarafında bulunan **Endpoint (Uç Noktası)** sekmesini tıklayın.
 

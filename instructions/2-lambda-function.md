@@ -1,4 +1,4 @@
-# Bir Alexa Merhaba Dünya Yeteneği Geliştirin
+# Bir 'Alexa Merhaba Dünya' Yeteneği Geliştirin
 <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/header._TTH_.png" />
 
 [![Ses Arayüzü (SA)](https://user-images.githubusercontent.com/6242253/49790785-1f51f800-fd40-11e8-9f61-5adad636aa37.png)](./1-voice-user-interface.md)
