@@ -1,61 +1,63 @@
-# Build An Alexa Hello World Skill
+# Bir 'Alexa Merhaba Dünya' Yeteneği Geliştirin
 <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/header._TTH_.png" />
 
-## Setup w/ ASK CLI
+## ASK KSA (Komut Satırı Arayüzü) Kullanarak Kurulum Yapmak
 
-### About
-This readme assumes you have your developer environment ready to go and that you have some familiarity with CLI (Command Line Interface) Tools, [AWS](https://aws.amazon.com/), and the [ASK Developer Portal](https://developer.amazon.com/alexa-skills-kit?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Content&sc_detail=hello-world-nodejs-V2_CLI-1&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Content_hello-world-nodejs-V2_CLI-1_Convert_WW_beginnersdevs&sc_segment=beginnersdevs). If not, [click here](./1-voice-user-interface.md) for a more detailed walkthrough.
+### Bu Bölüm Hakkında
+Bu bölümdeki açıklamalara geçmeden önce, geliştirme ortamınızı hazır hale getirmiş olduğunuzu, ayrıca KSA (Komut Satırı Arayüzü) araçları ile [AWS](https://aws.amazon.com/) ve [ASK Geliştirici Ana Sayfası](https://developer.amazon.com/alexa-skills-kit?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Content&sc_detail=hello-world-nodejs-V2_CLI-1&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Content_hello-world-nodejs-V2_CLI-1_Convert_WW_beginnersdevs&sc_segment=beginnersdevs) kullanımlarına bir miktar aşina olduğunuzu varsayıyoruz.  Söz konusu konuları daha detaylı anlatan  bir eğitim arıyorsanız [burayı](./1-voice-user-interface.md) tıklayın.
 
-### Pre-requisites
+### Ön gereksinimler
 
-* Node.js (> v8)
-* Register for an [AWS Account](https://aws.amazon.com/)
-* Register for an [Amazon Developer Account](https://developer.amazon.com?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Content&sc_detail=hello-world-nodejs-V2_CLI-1&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Content_hello-world-nodejs-V2_CLI-1_Convert_WW_beginnersdevs&sc_segment=beginnersdevs)
-* Install and Setup [ASK CLI](https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Content&sc_detail=hello-world-nodejs-V2_CLI-1&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Content_hello-world-nodejs-V2_CLI-1_Convert_WW_beginnersdevs&sc_segment=beginnersdevs)
+* Node.js (v8 sürümü ya da yukarısı)
+* Bir [AWS Hesabı](https://aws.amazon.com/) açın
+* Bir [Amazon Geliştirici Hesabı](https://developer.amazon.com?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Content&sc_detail=hello-world-nodejs-V2_CLI-1&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Content_hello-world-nodejs-V2_CLI-1_Convert_WW_beginnersdevs&sc_segment=beginnersdevs) açın
+* [ASK Komut Satırı Arayüzü](https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Content&sc_detail=hello-world-nodejs-V2_CLI-1&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Content_hello-world-nodejs-V2_CLI-1_Convert_WW_beginnersdevs&sc_segment=beginnersdevs) kurulumunu yapın
 
-### Installation
-1. **Make sure** you are running the latest version of the CLI
+### Kurulum
+1. **Önemli:** KSA'nın en son sürümünü kullandığınızı teyit edin.
 
 	```bash
 	$ npm update -g ask-cli
 	```
 
-2. **Clone** the repository.
+2. Bu repo'yu **kopyalayın**.
 
 	```bash
 	$ git clone https://github.com/alexa/skill-sample-nodejs-hello-world
 	```
 
-3. If it's your first time using it, **initialize** the [ASK CLI](https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Content&sc_detail=hello-world-nodejs-V2_CLI-1&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Content_hello-world-nodejs-V2_CLI-1_Convert_WW_beginnersdevs&sc_segment=beginnersdevs) by navigating into the repository and running npm command: `ask init`. Follow the prompts.
+3. [ASK KSA](https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Content&sc_detail=hello-world-nodejs-V2_CLI-1&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Content_hello-world-nodejs-V2_CLI-1_Convert_WW_beginnersdevs&sc_segment=beginnersdevs)'yı ilk defa kullanıyorsanız repo klasörüne geçin ve `ask init` komutunu çalıştırın.
 
 	```bash
 	$ cd skill-sample-nodejs-hello-world
 	$ ask init
 	```
 
-4. Install npm dependencies by navigating into the `/lambda/custom` directory and running the npm command: `npm install --save`
+4. npm bağımlılıklarını kurmak için `/lambda/custom` klasörüne geçin ve `npm install` komutunu çalıştırın.
 
 	```bash
 	$ cd lambda/custom
 	$ npm install
 	```
 
-### Deployment
+### Dağıtım
 
-ASK CLI **will create the skill and the Lambda function for you**. The Lambda function will be created in ```us-east-1 (Northern Virginia)``` by default.
+ASK KSA, **yetenek ve Lambda fonksiyonunu sizin için yaratacaktır**.
+Lambda fonksiyonu için varsayılan bölge olarak `us-east-1 (Northern Virginia)` değeri kullanılacaktır.
 
-1. Navigate to the project's root directory. you should see a file named 'skill.json' there.
-2. Deploy the skill and the Lambda function in one step by running the following command:
+1. Repo'nun kök dizinine geçin; dizinde 'skill.json' adında bir dosya göreceksiniz.
+
+2. Aşağıdaki komutu çalıştırarak yetenek ve Lambda fonksiyonunun dağıtımlarını tek bir adımda yapabilirsiniz:
 
 	```bash
 	$ ask deploy
 	```
 
-### Testing
+### Testler
 
-1. To test, you need to login to Alexa Developer Console, and **enable the "Test" switch on your skill from the "Test" Tab**.
+1. Testlerinizi yapabilmek için Alexa Geliştirici Konsolu'na giriş yapıp **yeteneğinizin "Test" sekmesinde "Test" anahtarını etkin hale getirmeniz gerekir**.
 
-2. Simulate verbal interaction with your skill through the command line (this might take a few moments) using the following example:
+2. Yeteneğinizle sözlü etkileşimin simülasyonunu yapmak için aşağıdaki örneği kullanın (bu komutun çalışması birkaç dakika alabilir):
 
 	```bash
 	 $ ask simulate -l en-US -t "start Hello World"
@@ -66,30 +68,31 @@ ASK CLI **will create the skill and the Lambda function for you**. The Lambda fu
 	  ...
 	 ```
 
-3. Once the "Test" switch is enabled, your skill can be tested on devices associated with the developer account as well. Speak to Alexa from any enabled device, from your browser at [echosim.io](https://echosim.io/welcome), or through your Amazon Mobile App and say :
+3. "Test" anahtarını etkinleştirdiğinizde, yeteneğinizin testini geliştirici hesabınıza bağlı olan farklı cihazlardan da yapabilirsiniz.  Etkinleştirilmiş bir cihazdan, tarayıcınız vasıtasıyla [echosim.io](https://echosim.io/welcome) sitesinden ya da Amazon Mobil Uygulamanıza konuşun ve aşağıdaki cümleyi söyleyin:
 
 	```text
 	Alexa, start hello world
 	```
-## Customization
+## Özelleştirme
 
-1. ```./skill.json```
+1. `./skill.json`
 
-   Change the skill name, example phrase, icons, testing instructions etc ...
+   Yetenek adını, örnek terimleri, simgeleri ve test direktiflerini değiştirebilirsiniz.
 
-   Remember than many information are locale-specific and must be changed for each locale (e.g. en-US, en-GB, de-DE, etc.)
+   Birçok bilginin yerel ayarlara bağlı olduğunu ve her bir yerel ayar için değiştirilmesi gerektiğini hatırlatmak isteriz (örneğin en-US, en-GB, de-DE, vb).
 
-   See the Skill [Manifest Documentation](https://developer.amazon.com/docs/smapi/skill-manifest.html?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Survey&sc_detail=hello-world-nodejs-V2_CLI-3&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Survey_hello-world-nodejs-V2_CLI-3_Convert_WW_beginnersdevs&sc_segment=beginnersdevs) for more information.
+   Detaylı bilgi için lütfen yeteneğe ait [Beyan (Manifest) Dokümentasyonu'na (İngilizce)](https://developer.amazon.com/docs/smapi/skill-manifest.html?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Survey&sc_detail=hello-world-nodejs-V2_CLI-3&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Survey_hello-world-nodejs-V2_CLI-3_Convert_WW_beginnersdevs&sc_segment=beginnersdevs) başvurun. 
 
-2. ```./lambda/custom/index.js```
+2. `./lambda/custom/index.js`
 
-   Modify messages, and data from the source code to customize the skill.
+   Yeteneğinizi özelleştirmek için kaynak kodunda bulunan ileti ve verileri değiştirin.
 
-3. ```./models/*.json```
 
-	Change the model definition to replace the invocation name and the sample phrase for each intent.  Repeat the operation for each locale you are planning to support.
+3. `./models/*.json`
 
-4. Remember to re-deploy your skill and Lambda function for your changes to take effect.
+	Yetenek çağrı adını ve her bir niyete karşılık gelen örnek terimleri değiştirmek için model tanımında değişiklik yapın.  Desteklediğiniz her bir yerel ayar için işlemleri tekrarlayın.
+
+4. Değişikliklerin etkin hale gelebilmesi için yeteneğiniz ve Lambda fonksiyonunuzun tekrar dağıtımını yapmayı unutmayın.
 
 	```bash
 	$ ask deploy
