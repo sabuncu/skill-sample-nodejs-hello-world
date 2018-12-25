@@ -1,7 +1,7 @@
 
-                                 Apache Lisansı
+                              Apache Lisansı
                            Sürüm 2.0, Ocak 2004
-                        http://www.apache.org/licenses/
+                      http://www.apache.org/licenses/
 
    KULLANIM, YENİDEN ÜRETİM VE DAĞITIM İÇİN HÜKÜMLER VE KOŞULLAR
 
